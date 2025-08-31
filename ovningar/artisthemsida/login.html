@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>login</title>
+</head>
+<header>
+  <nav class="section-header" aria-label="Primary">
+    <ul class="container-home">
+      <li><a href="index.html"><img src="../img/home.png" alt="Home"></a></li>
+    </ul>
+
+    <ul class="container-menu">
+      <li><a href="BLACKPINK.html"><img src="../img/header-background.png" alt="BLACKPINK"></a></li>
+      <li><a href="JENNIE.html"><img src="../img/jenniefont.png" alt="JENNIE"></a></li>
+      <li><a href="JISOO.html"><img src="../img/jisoofont.png" alt="JISOO"></a></li>
+      <li><a href="ROSE.html"><img src="../img/rosefont.png" alt="ROSÉ"></a></li>
+      <li><a href="LISA.html"><img src="../img/lisafont.png" alt="LISA"></a></li>
+    </ul>
+
+    <ul class="container-account">
+     <li>
+      <a id="accountLink" href="login.html">
+      <img id="accountIcon" src="../img/login.png" alt="Log in">
+       </a>
+     </li>
+    </ul>
+  </nav>
+</header>
+
+<form class="login-form" action="#" method="post">
+  <img src ="../img/login.png" alt="Account" class="account" width="150" height="50">
+
+  <fieldset class="fields">
+    <label for ="username">Username</label>
+    <input id="username" type="text" placeholder="Enter Username" name="username" required>
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="Enter Password" name="password" required>
+    <button type="submit">Login</button>
+
+        <span class="password">Forgot <a href="#">password?(This doesn't work)</a></span>
+        <span class="signup">Don't have an account? <a href="signup.html">Sign up</a></span>
+  </fieldset>
+</form>
+
+
+
+<script src="../js/header.js" defer></script>
+<script src="../js/login.js" defer></script>
+
+</body>
+</html>

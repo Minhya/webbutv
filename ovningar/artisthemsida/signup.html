@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create account</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <nav class="section-header" aria-label="Primary">
+    <ul class="container-home">
+      <li><a href="index.html"><img src="../img/home.png" alt="Home"></a></li>
+    </ul>
+    <ul class="container-menu">
+      <li><a href="BLACKPINK.html"><img src="../img/header-background.png" alt="BLACKPINK"></a></li>
+      <li><a href="JENNIE.html"><img src="../img/jenniefont.png" alt="JENNIE"></a></li>
+      <li><a href="JISOO.html"><img src="../img/jisoofont.png" alt="JISOO"></a></li>
+      <li><a href="ROSE.html"><img src="../img/rosefont.png" alt="ROSÉ"></a></li>
+      <li><a href="LISA.html"><img src="../img/lisafont.png" alt="LISA"></a></li>
+    </ul>
+    <ul class="container-account">
+      <li>
+        <a id="accountLink" href="login.html">
+          <img id="accountIcon" src="../img/login.png" alt="Log in">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="account-page">
+  <form id="signupForm" class="signup-form" action="#" method="post" novalidate>
+    <img src="../img/createaccount.png" alt="Create account" class="account" width="350" height="50">
+    <fieldset class="fields">
+      <label for="displayName">Display name</label>
+      <input id="displayName" name="displayName" required minlength="2">
+      <label for="username">Username</label>
+      <input id="username" name="username" required minlength="3" pattern="^[A-Za-z0-9_]{3,16}$">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required minlength="8">
+      <label for="confirm">Confirm password</label>
+      <input id="confirm" name="confirm" type="password" required>
+      <button type="submit" id="signupBtn">Create account</button>
+      <p id="signupError" aria-live="polite"></p>
+    </fieldset>
+  </form>
+</main>
+
+<script src="../js/header.js" defer></script>
+<script src="../js/signup.js" defer></script>
+</body>
+</html>
