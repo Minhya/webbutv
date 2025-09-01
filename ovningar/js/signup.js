@@ -1,6 +1,6 @@
 const form = document.getElementById('signupForm');
 const btn = document.getElementById('signupBtn');
-const errorEl = document.getElementById('signupError');
+const elSignupError = document.getElementById('signupError');
 
 const disp = document.getElementById('displayName');
 const username = document.getElementById('username');
@@ -16,7 +16,7 @@ btn.disabled = true;
 fetch('../json/users.json')
   .then(r => { if (!r.ok) throw new Error(); return r.json(); })
   .then(d => { users = Array.isArray(d.users) ? d.users : []; })
-  .catch(() => { errorEl.textContent = 'Could not load user data.'; })
+  .catch(() => { elSignupError.textContent = 'Could not load user data.'; })
   .finally(() => { btn.disabled = false; });
 
 function validate() {
@@ -34,9 +34,9 @@ function validate() {
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  errorEl.textContent = '';
+  elSignupError.textContent = '';
   const err = validate();
-  if (err) { errorEl.textContent = err; return; }
+  if (err) { elSignupError.textContent = err; return; }
 
   const u = username.value.trim();
   localStorage.setItem('sessionUser', u);

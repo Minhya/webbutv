@@ -39,7 +39,14 @@ header { width: 100% }
 
 /* header + innehåll */
 html, body { height: 100% }
-body { display: grid; grid-template-rows: auto 1fr }
+body { display: grid; 
+  grid-template-rows: auto 1fr }
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 65ch; 
+}
 
 /* Login  */
 .login-form {
@@ -47,7 +54,10 @@ body { display: grid; grid-template-rows: auto 1fr }
   max-width: 380px;
   width: min(90vw, 380px);
 }
-.fields { display: grid; grid-template-columns: 1fr; gap: 12px }
+.fields { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 12px }
 .fields label { display: block; margin: 8px 0 4px }
 .fields input { display: block; width: 100% }
 
@@ -66,12 +76,22 @@ body { display: grid; grid-template-rows: auto 1fr }
 }
 .login-form button[type="submit"]:hover { opacity: .9 }
 .login-form button[type="submit"]:active { transform: translateY(1px) }
-.login-form button[type="submit"]:focus-visible { outline: 2px solid #fff; outline-offset: 2px }
-.login-form button[type="submit"]:disabled { opacity: .6; cursor: not-allowed }
+.login-form button[type="submit"]:focus-visible { 
+  outline: 2px solid #fff; 
+  outline-offset: 2px }
+.login-form button[type="submit"]:disabled { opacity: .6; 
+  cursor: not-allowed }
 
 /* Account */
-.account-page { display: grid; place-items: center; padding: 20px }
-#profile { display: grid; gap: 12px; justify-items: center; text-align: center }
+.account-page { 
+  display: grid; 
+  place-items: center; 
+  padding: 20px }
+#profile { 
+  display: grid; 
+  gap: 12px; 
+  justify-items: center; 
+  text-align: center }
 #profile p { margin: 0 }
 #loading { place-self: center }
 
@@ -138,7 +158,6 @@ body { display: grid; grid-template-rows: auto 1fr }
 .blackpink-intro > p {
   margin: 0 auto;
   max-width: 65ch;
-  text-align: left;
 }
 
 /* Bio <section class="bio"> */

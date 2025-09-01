@@ -11,14 +11,14 @@ fetch('../json/users.json')
     const list = Array.isArray(d.users) ? d.users : [];
     const fromJson = list.find(x => x.username === u);
     const user = sessionProfile.username === u ? sessionProfile : (fromJson || { username: u });
-    const nameEl = document.getElementById('name');
-    const userEl = document.getElementById('username');
-    const emailEl = document.getElementById('email');
-    const avatarEl = document.getElementById('avatar');
-    if (nameEl) nameEl.textContent = user.name || user.username || '';
-    if (userEl) userEl.textContent = user.username || '';
-    if (emailEl) emailEl.textContent = user.email || '';
-    if (avatarEl && user.avatar) avatarEl.src = user.avatar;
+    const elName = document.getElementById('name');
+    const elUser = document.getElementById('username');
+    const elEmail = document.getElementById('email');
+    const elAvatar = document.getElementById('avatar');
+    if (elName) elName.textContent = user.name || user.username || '';
+    if (elUser) elUser.textContent = user.username || '';
+    if (elEmail) elEmail.textContent = user.email || '';
+    if (elAvatar && user.avatar) elAvatar.src = user.avatar;
     profile.hidden = false;
   })
   .catch(() => { loading.textContent = 'Could not read profile.'; })
